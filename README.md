@@ -14,6 +14,7 @@ Bad design
 ![SRP bad design](https://www.dropbox.com/s/mnufnytwr571g58/SRP_BadDesign.JPG?raw=1)
 
 Good design
+
 A car itself cannot print. Create another class *Printer* with a method which takes *Car* object as a parameter.
 
 ![SRP good design](https://www.dropbox.com/s/h758dwso18azkwo/SRP_GoodDesign.JPG?raw=1)
@@ -31,6 +32,7 @@ Bad design
 ![ISP bad design](https://www.dropbox.com/s/k2zexaqw7lcgjys/ISP_BadDesign.JPG?raw=1)
 
 Good design
+
 You cannot add a new bus, so *Bus* class should not implement *IVehicle* interface. In this case divide IVehicle interface into two with different methods.
 
 ![ISP good design](https://www.dropbox.com/s/i2xjstwmg45ohly/ISP_GoodDesign.JPG?raw=1)
