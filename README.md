@@ -33,7 +33,7 @@ Bad design
 
 Good design
 
-You cannot add a new bus, so *Bus* class should not implement *IVehicle* interface. In this case divide IVehicle interface into two with different methods.
+You cannot add a new bus, so *Bus* class should not implement *IVehicle* interface. In this case divide IVehicle interface into two interfaces with different methods.
 
 ![ISP good design](https://www.dropbox.com/s/i2xjstwmg45ohly/ISP_GoodDesign.JPG?raw=1)
 
