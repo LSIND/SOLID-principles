@@ -1,8 +1,8 @@
 # SOLID-principles
-examples of SOLID principles compared to bad design
+Examples of SOLID principles compared to bad design
 
 # ISP = Interface Seggregation Principle
-classes should not be depend on methods they do not use.
+Classes should not depend on methods they do not use.
 
 Example.
 Two classes with similar functionaly *Bus* and *Car*:
