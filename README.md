@@ -1,7 +1,7 @@
 # SOLID-principles
 Examples of SOLID principles compared to bad design
 
-# SRP = Single responsibility principle
+# SRP = [Single responsibility principle](https://github.com/LSIND/SOLID-principles/tree/master/SolidExamples/SolidExamplesApp/SRP)
 Every class should have responsibility over a single part of the functionality and that responsibility should be entirely encapsulated by this class.
 
 Example.
