@@ -11,7 +11,7 @@ SOLID Principles is an acronym of five principles.
 
 
 # SRP = [Single responsibility principle](https://github.com/LSIND/SOLID-principles/tree/master/SolidExamples/SolidExamplesApp/SRP)
-Every class should have responsibility over a single part of the functionality and that responsibility should be entirely encapsulated by this class.
+> Every class should have responsibility over a single part of the functionality and that responsibility should be entirely encapsulated by this class.
 
 Example.
 Class *Car* has the following information:
@@ -24,8 +24,8 @@ Car class contains properties <br/> and a method | A car itself cannot print. Cr
 ![SRP bad design](https://www.dropbox.com/s/mnufnytwr571g58/SRP_BadDesign.JPG?raw=1)  |  ![SRP good design](https://www.dropbox.com/s/h758dwso18azkwo/SRP_GoodDesign.JPG?raw=1)
 
 
-# LSP = Liskov’s Substitution Principle
-Derived classes should extend base classes not change it.
+# LSP = [Liskov’s Substitution Principle](https://github.com/LSIND/SOLID-principles/tree/master/SolidExamples/SolidExamplesApp/LSP)
+> Derived classes should extend base classes not change it.
 
 Example:
 Base class *Vehicle* contains two methods of calculating a rent of vehicle and getting information about it. Classes *Bus* and *Car* inherit from *Vehicle* but there is no ability to rent a *Bus*.
@@ -36,14 +36,13 @@ Trying to instantiate a list of *Vehicle* type and add both <br/> *Car and *Bus*
 ![LSP bad design](https://www.dropbox.com/s/kfvveysfszcxl30/LSP_BadDesign.PNG?raw=1)  |  ![LSP good design](https://www.dropbox.com/s/76sxwcswfd0d6w5/LSP_GoodDesign.PNG?raw=1)
 
 
-# ISP = Interface Seggregation Principle
-Classes should not depend on methods they do not use.
+# ISP = [Interface Seggregation Principle](https://github.com/LSIND/SOLID-principles/tree/master/SolidExamples/SolidExamplesApp/ISP)
+> Classes should not depend on methods they do not use.
 
 Example.
 Two classes with similar functionaly *Bus* and *Car*:
  - You can print details about a vehicle
  - You can add new car but not a new bus. 
-
 
 | bad design             |  good design |
 -------------------------|-------------------------
