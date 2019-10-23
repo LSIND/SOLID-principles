@@ -40,11 +40,12 @@ Reporting class contains property <br/> and a method *PrintData* which cosists o
 > Derived classes should extend base classes not change it.
 
 Example:
-Base class *Vehicle* contains two methods of calculating a rent of vehicle and getting information about it. Classes *Bus* and *Car* inherit from *Vehicle* but there is no ability to rent a *Bus*.
+Base class *Vehicle* contains two methods of calculating a rent of vehicle and getting information about it.  
+Classes *Bus* and *Car* inherit from *Vehicle* but there is no ability to rent a *Bus*.
 
 | bad design             |  good design |
 -------------------------|-------------------------
-Trying to instantiate a list of *Vehicle* type and add both <br/> *Car and *Bus* objects to it will lead to error | Create two interfaces instead of class *Vehicle* <br/> and let *Car* implement both and *Bus* - only *IVehicle*
+Trying to instantiate a list of *Vehicle* type and <br/> add both *Car and *Bus* objects to it will lead to error | Create two interfaces instead of class *Vehicle* and <br/> let *Car* implement both and *Bus* - only *IVehicle*
 ![LSP bad design](https://www.dropbox.com/s/kfvveysfszcxl30/LSP_BadDesign.PNG?raw=1)  |  ![LSP good design](https://www.dropbox.com/s/76sxwcswfd0d6w5/LSP_GoodDesign.PNG?raw=1)
 
 
@@ -58,7 +59,7 @@ Two classes with similar functionaly *Bus* and *Car*:
 
 | bad design             |  good design |
 -------------------------|-------------------------
-*Car* and *Bus* classes implement *IVehicle* <br/> interface  with two methods | You cannot add a new bus, so *Bus* class should not implement <br/> *IVehicle* interface. In this case divide *IVehicle* interface<br/> into two interfaces with different methods
+*Car* and *Bus* classes implement *IVehicle* <br/> interface  with two methods | You cannot add a new bus, so *Bus* class should not <br/> implement *IVehicle* interface. In this case divide *IVehicle* <br/> into two interfaces with different methods
 ![ISP bad design](https://www.dropbox.com/s/k2zexaqw7lcgjys/ISP_BadDesign.JPG?raw=1) |  ![ISP good design](https://www.dropbox.com/s/i2xjstwmg45ohly/ISP_GoodDesign.JPG?raw=1)
 
 
