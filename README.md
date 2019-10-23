@@ -66,10 +66,11 @@ Two classes with similar functionaly *Bus* and *Car*:
 > High-level classes should not depend on low-level classes.
 
 Example.
-Classes which can send notofocations by e-mail. 
+Classes which can send notifications by e-mail. 
 
 | bad design             |  good design |
 -------------------------|-------------------------
-Class *Email* and *Notification* are associated <br/> with each other. Class *Notification* creates an instance of *Email*. <br/>  What to do if there would be a need of WhatsApp and mobile phone notofications? | You cannot add a new bus, so *Bus* class should not implement <br/> *IVehicle* interface. In this case divide *IVehicle* interface<br/> into two interfaces with different methods
-![ISP bad design](https://www.dropbox.com/s/k2zexaqw7lcgjys/ISP_BadDesign.JPG?raw=1) |  ![ISP good design](https://www.dropbox.com/s/i2xjstwmg45ohly/ISP_GoodDesign.JPG?raw=1)
+Class *Email* and *Notification* are associated <br/> with each other. Class *Notification* creates <br/> an instance of *Email*. What to do if <br/> there would be a need of WhatsApp <br/> and mobile phone notofications? | Create an interface *IMessenger*, <br/> make class *Email* implement it and <br/> create a field of this type in class *Notification*
+![DIP bad design](https://www.dropbox.com/s/fm2154ydvdqh3hs/DIP_BadDesign.JPG?raw=1) |  ![DIP good design](https://www.dropbox.com/s/aqh6z7roho5gu69/DIP_GoodDesign.JPG?raw=1)
 
+# +++ Dependency Injection
