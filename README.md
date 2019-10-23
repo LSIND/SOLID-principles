@@ -23,6 +23,18 @@ Class *Car* has the following information:
 Car class contains properties <br/> and a method | A car itself cannot print. Create another class *Printer* <br/> with a method which takes *Car* object as a parameter
 ![SRP bad design](https://www.dropbox.com/s/mnufnytwr571g58/SRP_BadDesign.JPG?raw=1)  |  ![SRP good design](https://www.dropbox.com/s/h758dwso18azkwo/SRP_GoodDesign.JPG?raw=1)
 
+# OCP = [Open / closed principle](https://github.com/LSIND/SOLID-principles/tree/master/SolidExamples/SolidExamplesApp/OCP)
+> Classes should be open for extension, but closed for modification.
+
+Example.
+Class *Reporting* has the following information:
+- You can create report about a car object in both pdf and docx formats  
+
+| bad design             |  good design |
+-------------------------|-------------------------
+Reporting class contains property <br/> and a method *PrintData* which cosists of <br/> multiply if-else. | Make method *PrintData* virtual and <br/> create two derived classes to override this method
+![OCP bad design](https://www.dropbox.com/s/nh00yok9nnjvhcg/OCP_BadDesign.JPG?raw=1)  |  ![OCP good design](https://www.dropbox.com/s/3ui73s6u2p2vgej/OCP_GoodDesign.JPG?raw=1)
+
 
 # LSP = [Liskov’s Substitution Principle](https://github.com/LSIND/SOLID-principles/tree/master/SolidExamples/SolidExamplesApp/LSP)
 > Derived classes should extend base classes not change it.
@@ -47,5 +59,17 @@ Two classes with similar functionaly *Bus* and *Car*:
 | bad design             |  good design |
 -------------------------|-------------------------
 *Car* and *Bus* classes implement *IVehicle* <br/> interface  with two methods | You cannot add a new bus, so *Bus* class should not implement <br/> *IVehicle* interface. In this case divide *IVehicle* interface<br/> into two interfaces with different methods
+![ISP bad design](https://www.dropbox.com/s/k2zexaqw7lcgjys/ISP_BadDesign.JPG?raw=1) |  ![ISP good design](https://www.dropbox.com/s/i2xjstwmg45ohly/ISP_GoodDesign.JPG?raw=1)
+
+
+# DIP = [Dependency Inversion Principle](https://github.com/LSIND/SOLID-principles/tree/master/SolidExamples/SolidExamplesApp/DIP)
+> High-level classes should not depend on low-level classes.
+
+Example.
+Classes which can send notofocations by e-mail. 
+
+| bad design             |  good design |
+-------------------------|-------------------------
+Class *Email* and *Notification* are associated <br/> with each other. Class *Notification* creates an instance of *Email*. <br/>  What to do if there would be a need of WhatsApp and mobile phone notofications? | You cannot add a new bus, so *Bus* class should not implement <br/> *IVehicle* interface. In this case divide *IVehicle* interface<br/> into two interfaces with different methods
 ![ISP bad design](https://www.dropbox.com/s/k2zexaqw7lcgjys/ISP_BadDesign.JPG?raw=1) |  ![ISP good design](https://www.dropbox.com/s/i2xjstwmg45ohly/ISP_GoodDesign.JPG?raw=1)
 
