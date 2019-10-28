@@ -12,10 +12,10 @@ namespace SolidExamplesApp.LSP
 
     public interface IRent
     {
-        int CalculateRent(int id);
+       public int CalculateRent(int id);
     }
 
-    public class Car : IVehicle, IRent
+    public class GoodCar : IVehicle, IRent
     {
         public int ID { get; }
         public int CalculateRent(int id)
@@ -29,7 +29,7 @@ namespace SolidExamplesApp.LSP
         }
     }
 
-    public class Bus : IVehicle
+    public class GoodBus : IVehicle
     {
         public int ID { get; }
         public string GetVehicleDetails(int id)
