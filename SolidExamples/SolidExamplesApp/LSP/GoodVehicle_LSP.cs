@@ -1,40 +1,40 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SolidExamplesApp.LSP
 {
-    public class GoodVehicle_LSP
+    public interface IVehicle
     {
-        public interface IVehicle
+        int ID { get; }
+        string GetVehicleDetails(int id);
+    }
+
+    public interface IRent
+    {
+        int CalculateRent(int id);
+    }
+
+    public class Car : IVehicle, IRent
+    {
+        public int ID { get; }
+        public int CalculateRent(int id)
         {
-            string GetVehicleDetails(int id);
+            return 25000;
         }
 
-        public interface IPrice
+        public string GetVehicleDetails(int id)
         {
-            int CalculatePrice(int id);
+            return "This is a car";
         }
+    }
 
-        public class Car : IVehicle, IPrice
+    public class Bus : IVehicle
+    {
+        public int ID { get; }
+        public string GetVehicleDetails(int id)
         {
-            public int CalculatePrice(int employeeId)
-            {
-                return 25000;
-            }
-
-            public string GetVehicleDetails(int employeeId)
-            {
-                return "This is a car";
-            }
-        }
-
-        public class Bus : IVehicle
-        {
-            public string GetVehicleDetails(int employeeId)
-            {
-                return "This is a bus";
-            }
+            return "This is a bus";
         }
     }
 }
